@@ -1,0 +1,86 @@
+@import '../../styles/vars';
+
+.item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  width: 450px;
+  color: black;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 7px;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 6.5px 11px;
+  word-break: break-word;
+  transition: 0.3s;
+
+  &--done{
+    background-color: $pink;
+    color: $white;
+  }
+
+  &--big{
+    min-height: 125px;
+  }
+
+  .done{
+    text-decoration: line-through;
+    color: $white;
+  }
+
+  &__time{
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: $white;
+    font-size: 24px;
+  }
+
+  &__del{
+    font-size: 24px;
+    color: $dark;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+      color: $yellow;
+    }
+  }
+}
+
+label{
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  input{
+    position: absolute;
+    transform: scale(0);
+  }
+
+  input:checked ~ .checkbox{
+    transform: rotate(45deg);
+    width: 20px;
+    margin-left: 16px;
+    border-color: $yellow;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-radius: 0;
+  }
+
+  .checkbox{
+    display: block;
+    width: inherit;
+    height: inherit;
+    border: 3px solid $white;
+    border-radius: 6px;
+    transition: all 0.375s;
+  }
+}

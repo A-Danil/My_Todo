@@ -53,10 +53,19 @@
       margin: 0 10px;
       outline: none;
       border: none;
+      background-color: transparent;
+      position: relative;
       &::placeholder{
         color: $dark;
         font-size: 18px;
       }
+    }
+  }
+
+  &__input{
+    position: relative;
+    &--error{
+      background-color: $yellow !important;
     }
   }
 
@@ -93,6 +102,19 @@
       }
     }
 
+  }
+}
+
+.error{
+  position: absolute !important;
+  right: -175px;
+  top: 0;
+  border: 1px solid $dark-pink !important;
+  background-color: $pink !important;
+  height: 50px;
+  border-radius: 7px !important;
+  .ant-alert-message{
+    color: $yellow;
   }
 }
 

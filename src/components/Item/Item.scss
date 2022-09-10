@@ -15,10 +15,15 @@
   padding: 6.5px 11px;
   word-break: break-word;
   transition: 0.3s;
+  $item: &;
 
   &--done{
     background-color: $pink;
     color: $white;
+
+    #{$item}__del{
+      color: $yellow !important;
+    }
   }
 
   &--big{
@@ -41,12 +46,9 @@
 
   &__del{
     font-size: 24px;
-    color: $dark;
+    color: $dark-pink !important;
     cursor: pointer;
     transition: 0.5s;
-    &:hover{
-      color: $yellow;
-    }
   }
 }
 
